@@ -1,0 +1,67 @@
+body {
+    background-color: black;
+    font-family: Verdana;
+}
+article {
+    background-color: rgb(39, 39, 39);
+    margin: 10pt 60pt 10pt;
+    padding: 10pt;
+    display: inline-block;
+    color: aliceblue;
+}
+img {
+    width: 50%;
+    float: left;
+    margin-right: 10pt; 
+}
+
+nav > div {
+    display:inline-block;
+}
+nav > div > a {
+    font-size: 2;
+    color: rgb(255, 255, 255);
+    float: right;
+    text-decoration: none;
+    padding: 10pt;
+
+}
+.headerOfSite {
+    margin: 0pt;
+    padding: 20pt;
+    background-color: rgb(39, 39, 39);
+}
+.headerOfSite > nav > div > a:hover {
+    background-color: rgb(247, 255, 177);
+    color: rgb(0, 0, 0);
+    float: right;
+    text-decoration: none;
+    padding: 10pt;
+}
+.headerOfSite label.toggleMenu{
+    display: none;
+    padding: 10pt;
+    cursor: pointer;
+    color: aliceblue;
+}
+.headerOfSite [type = "checkbox"] {
+    display: none;
+}
+@media only screen and (max-width: 810pt) {
+    img {
+        width: 100%;
+    }
+    article {
+        background-color: rgb(39, 39, 39);
+        margin: 10pt 0pt 10pt;
+    }
+    .headerOfSite label.toggleMenu{
+        display: block;
+    }
+    .headerOfSite > nav {
+        display: none;
+    }
+    input.toggleMenu:checked ~ nav {
+        display: block;
+    }
+}
